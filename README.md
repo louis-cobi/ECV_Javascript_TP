@@ -1,5 +1,5 @@
 # ECV TP JAVASCRIPT
 
-COBIBO
+COBIGO
 Louis
 louis.cobigo@gmail.com
