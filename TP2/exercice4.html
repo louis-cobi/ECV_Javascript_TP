@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice4</title>
+</head>
+<body>
+    <div id="moveDiv" style="width:50px;height:50px;background-color:pink"></div>
+</body>
+<script>
+    document.onkeydown = detectKey;
+    function detectKey(e) {
+        let posLeft = document.getElementById("moveDiv").offsetLeft;
+        let posTop = document.getElementById("moveDiv").offsetTop;
+        e = e || window.event;
+        if (e.key === 'ArrowUp') {
+            // up arrow
+            document.getElementById("moveDiv").style.marginTop  = (posTop-50)+"px";
+        }
+        else if (e.key === 'ArrowDown') {
+            // down arrow
+            document.getElementById("moveDiv").style.marginTop  = (posTop+50)+"px";
+        }
+        else if (e.key === 'ArrowLeft') {
+            // left arrow
+            document.getElementById("moveDiv").style.marginLeft  = (posLeft-50)+"px";
+        }
+        else if (e.key === 'ArrowRight') {
+            // right arrow
+            document.getElementById("moveDiv").style.marginLeft  = (posLeft+50)+"px";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice3</title>
+</head>
+<body>
+    <img id="dio" src="https://static.tvtropes.org/pmwiki/pub/images/dio_sc_2.png" alt="dio">
+    <img id="giorno" src="https://static.jojowiki.com/images/thumb/4/4a/latest/20210422070411/Giorno_Giovanna_Infobox_Anime.png/400px-Giorno_Giovanna_Infobox_Anime.png" alt="giorno">
+</body>
+<script>
+
+    const dio = document.getElementById("dio");
+    const giorno = document.getElementById("giorno");
+
+    dio.onclick = function(){
+        dio.width *= 1.2;
+        giorno.width *= 0.8;
+    }
+    giorno.onclick = function(){
+        giorno.width *= 1.2;
+        dio.width *= 0.8;
+    }
+
+</script>
+</html>

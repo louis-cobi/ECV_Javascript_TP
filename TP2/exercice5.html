@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice5</title>
+</head>
+<body>
+    <img id="dio" onmouseover="zoom(this)"  onmouseleave="dezoom(this)" src="https://static.tvtropes.org/pmwiki/pub/images/dio_sc_2.png" alt="dio">
+    <img id= "jotaro" onmouseover="zoom(this)"  onmouseleave="dezoom(this)" src="https://static.wikia.nocookie.net/heroes-fr/images/1/1e/Jotaro_Kujo_EoH.png/revision/latest?cb=20201110084028&path-prefix=fr" alt="jotaro">
+    <img id="giorno" onmouseover="zoom(this)"  onmouseleave="dezoom(this)" src="https://static.jojowiki.com/images/thumb/4/4a/latest/20210422070411/Giorno_Giovanna_Infobox_Anime.png/400px-Giorno_Giovanna_Infobox_Anime.png" alt="giorno">
+</body>
+<script>
+    function zoom(e){
+        e.style = "transform: scale(3);transition: transform .5s;"
+    }
+
+    function dezoom(e){
+        e.style = "transform: scale(1);transition: transform .5s;"
+    }
+</script>
+</html>

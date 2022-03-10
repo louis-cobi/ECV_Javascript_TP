@@ -1,1 +1,5 @@
-# ECV_Javascript_TP1
+# ECV TP JAVASCRIPT
+
+COBIBO
+Louis
+louis.cobigo@gmail.com

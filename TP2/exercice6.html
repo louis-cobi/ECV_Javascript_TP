@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice6</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var oReq = new XMLHttpRequest();
+
+    oReq.open("GET", "https://en.wikipedia.org/wiki/Dio_Brando", true);
+    oReq.responseType = "arraybuffer";
+    oReq.onload = function(e) {
+    var arraybuffer = oReq.response; // n'est pas responseText
+    /* ... */
+    }
+    oReq.send();
+</script>
+</html>
