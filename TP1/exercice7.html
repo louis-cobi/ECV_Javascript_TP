@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice6</title>
+    <title>exercice 7</title>
 </head>
-<body id="body">
+<body id="body" style="color: white;background-color: #1c1c1c;">
     <td class="navigation-only" colspan="2" style="border-top: 2px #DFE4FB solid; font-size: 80%; background:inherit; text-align: right;"><span class="plainlinks" style="float:left;"><a class="external text" href="https://fr.wikipedia.org/w/index.php?title=Jotaro_Kujo&amp;action=edit&amp;section=0"><span style="color:#555;">modifier</span></a></span>&#160;<a href="/wiki/Mod%C3%A8le:Infobox_Personnage_(fiction)" title="Consultez la documentation du modèle"><img alt="Consultez la documentation du modèle" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Info_Simple.svg/12px-Info_Simple.svg.png" decoding="async" width="12" height="12" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/38/Info_Simple.svg/18px-Info_Simple.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/38/Info_Simple.svg/24px-Info_Simple.svg.png 2x" data-file-width="512" data-file-height="512" /></a></td>
 </tr>
 </tbody></table>
@@ -173,19 +173,11 @@ Transclusion expansion time report (%,ms,calls,template)
 <div class="printfooter">Ce document provient de «&#160;<a dir="ltr" href="https://fr.wikipedia.org/w/index.php?title=Jotaro_Kujo&amp;oldid=192095039">https://fr.wikipedia.org/w/index.php?title=Jotaro_Kujo&amp;oldid=192095039</a>&#160;».</div></div>
 		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Cat%C3%A9gorie:Accueil" title="Catégorie:Accueil">Catégorie</a> : <ul><li><a href="/wiki/Cat%C3%A9gorie:JoJo%27s_Bizarre_Adventure" title="Catégorie:JoJo&#039;s Bizarre Adventure">JoJo's Bizarre Adventure</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Catégories cachées : <ul><li><a href="/wiki/Cat%C3%A9gorie:Article_utilisant_une_Infobox" title="Catégorie:Article utilisant une Infobox">Article utilisant une Infobox</a></li><li><a href="/wiki/Cat%C3%A9gorie:Article_utilisant_l%27infobox_Personnage_(fiction)" title="Catégorie:Article utilisant l&#039;infobox Personnage (fiction)">Article utilisant l'infobox Personnage (fiction)</a></li><li><a href="/wiki/Cat%C3%A9gorie:Article_%C3%A0_r%C3%A9f%C3%A9rence_n%C3%A9cessaire" title="Catégorie:Article à référence nécessaire">Article à référence nécessaire</a></li><li><a href="/wiki/Cat%C3%A9gorie:Page_utilisant_une_image_multiple_avec_des_images_redimensionn%C3%A9es_automatiquement" title="Catégorie:Page utilisant une image multiple avec des images redimensionnées automatiquement">Page utilisant une image multiple avec des images redimensionnées automatiquement</a></li><li><a href="/wiki/Cat%C3%A9gorie:Article_contenant_un_appel_%C3%A0_traduction_en_japonais" title="Catégorie:Article contenant un appel à traduction en japonais">Article contenant un appel à traduction en japonais</a></li><li><a href="/wiki/Cat%C3%A9gorie:Portail:Animation_et_bande_dessin%C3%A9e_asiatiques/Articles_li%C3%A9s" title="Catégorie:Portail:Animation et bande dessinée asiatiques/Articles liés">Portail:Animation et bande dessinée asiatiques/Articles liés</a></li><li><a href="/wiki/Cat%C3%A9gorie:Portail:Japon/Articles_li%C3%A9s" title="Catégorie:Portail:Japon/Articles liés">Portail:Japon/Articles liés</a></li><li><a href="/wiki/Cat%C3%A9gorie:Portail:Asie/Articles_li%C3%A9s" title="Catégorie:Portail:Asie/Articles liés">Portail:Asie/Articles liés</a></li><li><a href="/wiki/Cat%C3%A9gorie:Pages_avec_des_traductions_non_relues" title="Catégorie:Pages avec des traductions non relues">Pages avec des traductions non relues</a></li></ul></div></div>
 	</div>
-</main>∏
+</main>
 </body>
 <script>
-const body = document.getElementById('body');
-
-// 👇️ Change text color on mouseover
-body.addEventListener('mouseover', function handleMouseOver() {
-  body.style.color = 'red';
-});
-
-// 👇️ Change text color back on mouseout
-body.addEventListener('mouseout', function handleMouseOut() {
-  body.style.color = 'black';
-});
+    let backgroundColor = getComputedStyle(document.body, null).backgroundColor;
+    let width = document.getElementById("body");
+    console.log("background color :", backgroundColor, "width:", width.offsetWidth, "px");
 </script>
 </html>
