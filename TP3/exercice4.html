@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice 4</title>
+</head>
+<body>
+    <ul></ul>
+</body>
+<script> 
+window.addEventListener("DOMContentLoaded", (event) => {
+    window.onkeyup = keyPush;
+    let ul = document.createElement("ul");
+    document.body.appendChild(ul);
+
+    function keyPush(e) {
+    let li = document.createElement("li");
+    li.appendChild(document.createTextNode(e.key));
+    ul.prepend(li);
+    let sizeli =ul.getElementsByTagName("li").length;
+    listKey=ul.getElementsByTagName("li");
+    if(sizeli === 20){
+        var lastKey = listKey[listKey.length - 1];
+        lastKey.parentNode.removeChild(lastKey);
+    }   
+    }
+});
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1</title>
+</head>
+<body>
+    <div onclick="colorChange(this)" style="width: 50px;height: 50px;background-color: black;margin-top: 10px;"></div>
+    <div onclick="colorChange(this)" style="width: 50px;height: 50px;background-color: black;margin-top: 10px;"></div>
+    <div onclick="colorChange(this)" style="width: 50px;height: 50px;background-color: black;margin-top: 10px;"></div>
+</body>
+<script>
+    function colorChange(clickedElement){
+        let color = clickedElement.style.backgroundColor;
+        if(color === "black"){
+            return clickedElement.style.backgroundColor = "red"
+        }
+        else{
+            return clickedElement.style.backgroundColor = "black"
+        }
+    };
+</script>
+</html>

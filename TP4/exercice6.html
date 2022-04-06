@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 6</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    function findLongestWord(str){
+        let checkWord = str.match(/\w[a-z]{0,}/gi);
+        let longestWord = checkWord[0];
+        for(let i = 1 ; i < checkWord.length ; i++)
+        {
+            if(longestWord.length < checkWord[i].length)
+            {
+                longestWord = checkWord[i];
+            } 
+        }
+        return longestWord;
+    }
+    console.log(findLongestWord("le chemin le plus cours n'est pas toujours le meilleur"));
+</script>
+</html>
