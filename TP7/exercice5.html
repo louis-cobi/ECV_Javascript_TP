@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice 5</title>
+</head>
+<body>
+    
+</body>
+<script>
+  // exercice 1  
+    
+  const promise1 = (string) => {
+            return new Promise((success, failure) => {
+                if (string.length > 20) {
+                    success("True");
+                } else {
+                    failure("False");
+                }
+            })
+        }
+
+        async function calculStr(string) {
+            try { 
+                const promise = await promise1(string);
+                console.log("+ de 20 caractères : ", promise);
+            } catch(e) {
+                console.log("+ de 20 caractères : ", e);
+            }
+        }
+
+        calculStr("Cette pharse a t'elle plus de 20 caractères ?");
+
+    // exercice 2   
+    
+        const promise2 = (a,b) => {
+            return new Promise((success, failure) => {
+                if (a > b) {
+                    success(a - b);
+                } else {
+                    failure("la deuxième valeur est plus grande que la première");
+                }
+            })
+        }
+        
+        async function biggerThan(a,b) {
+            try { 
+                const promise = await promise2(a,b);
+                console.log(promise);
+            } catch(e) {
+                console.log(e);
+            }
+        }
+
+        biggerThan(5,2);  
+
+    // exercice 3   
+        
+        const promise3 = (birthDateString) => {
+            let from = birthDateString.split("/");
+            let birthdate = new Date(from[2], from[1] - 1, from[0]);
+            let currentDay = new Date();
+            let diff = currentDay - birthdate;
+            let currentAge = Math.floor(diff/31557600000);
+
+            return new Promise((success, failure) => {
+                if (currentAge >= 18) {
+                    success("La personne est majeur : True");
+                } else {
+                    failure("La personne est majeur : False");
+                }
+            })
+        }
+
+        async function calculateAge(birthDateString) {
+            try { 
+                const promise = await promise3(birthDateString);
+                console.log(promise);
+            } catch(e) {
+                console.log(e);
+            }
+        }
+
+        calculateAge('20/10/1994');   
+</script>
+</html>

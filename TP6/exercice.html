@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TP6 - exercice </title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function (event) {
+            const voyelles = ['A', 'E', 'I', 'O', 'U'];
+            const consonnes = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z'];
+            
+            function fiscalCode(person) {
+                let name = person.name.toUpperCase();
+                let surname = person.surname.toUpperCase();
+                let gender = person.gender;
+                let dob = person.dob;
+
+                let consonneCountName = 0;
+                let consonneCountSurname = 0;
+                let voyelleCountName = 0;
+                let voyelleCountSurname = 0;
+
+                let consonnesTab = [];
+                let consonnesTabSurname = [];
+                let voyellesTab = [];
+                let voyellesTabSurname = [];
+
+                for (let i = 0; i < name.length; i++) {
+                    if (consonnes.includes(name[i])) {
+                        consonneCountName++;
+
+                        consonnesTab.push(name[i]);
+                    } else if (voyelles.includes(name[i])) {
+                        voyelleCountName++;
+                        voyellesTab.push(name[i]);
+                    }
+                }
+
+                let nameConvert = "";
+
+                if (consonneCountName == 3) {
+                    nameConvert = consonnesTab.join("");
+
+                } else if (consonneCountName < 3) {
+
+                    nameConvert = consonnesTab.join("") + voyellesTab[0];
+
+                } else if (consonneCountName > 3) {
+                    nameConvert = consonnesTab[0] + consonnesTab[2] + consonnesTab[3];
+                }
+
+
+                for (let i = 0; i < surname.length; i++) {
+                    if (consonnes.includes(surname[i])) {
+                        consonneCountSurname++;
+                        consonnesTabSurname.push(surname[i]);
+                    } else if (voyelles.includes(surname[i])) {
+                        voyelleCountSurname++;
+                        voyellesTabSurname.push(surname[i]);
+                    }
+                }
+
+
+                let surnameConvert = "";
+
+                if (consonneCountSurname >= 3) {
+                    surnameConvert = consonnesTabSurname.join("");
+                    
+                } else if (consonneCountSurname < 3 && surname.length >= 3) {
+                    surnameConvert = consonnesTabSurname.join("") + voyellesTabSurname[0];
+                } else if (surname.length < 3) {
+                    surnameConvert = consonnesTabSurname[0] + voyellesTabSurname[0] + "X";
+                }
+
+                let dobTab = [];
+
+                dob.split("/").forEach(function (item) {
+                    dobTab.push(item);
+                });
+
+                let dobYear;
+                let dobMonth;
+                let dobDay;
+
+                dobDay = dobTab[0];
+
+                dobMonth = dobTab[1];
+
+                dobYear = dobTab[2];
+
+                dobYearConvert = dobYear.substring(dobYear.length - 2, dobYear.length);
+
+
+                let dobMonthConvert = "";
+
+
+                switch (dobMonth) {
+                    case "1":
+                        dobMonthConvert = "A";
+                        break;
+
+                    case "2":
+                        dobMonthConvert = "B";
+                        break;
+
+                    case "3":
+                        dobMonthConvert = "C";
+                        break;
+
+                    case "4":
+                        dobMonthConvert = "D";
+                        break;
+
+                    case "5":
+                        dobMonthConvert = "E";
+                        break;
+
+                    case "6":
+                        dobMonthConvert = "H";
+                        break;
+
+                    case "7":
+                        dobMonthConvert = "L";
+                        break;
+
+                    case "8":
+                        dobMonthConvert = "M";
+                        break;
+
+                    case "9":
+                        dobMonthConvert = "P";
+                        break;
+
+                    case "10":
+                        dobMonthConvert = "R";
+                        break;
+
+                    case "11":
+                        dobMonthConvert = "S";
+                        break;
+
+                    case "12":
+                        dobMonthConvert = "T";
+                        break;
+                }
+
+                let dobDayConvert = "";
+                let genderConvert = "";
+
+                if (gender == "M") {
+                    if (dobDay <= 10) {
+                        dobDayConvert = "0".concat(dobDay);
+                    } else {
+                        dobDayConvert = dobDay;
+                    }
+                } else if (gender == "F") {
+                    dobDayConvert = parseInt(dobDay) + 40
+
+                }
+
+                let result = surnameConvert + nameConvert + dobYearConvert + dobMonthConvert + dobDayConvert;
+                console.log(result);
+                return result;
+
+            }
+
+
+            let person = {
+                surname: "Yu",
+                name: "Helen",
+                gender: "F",
+                dob: "1/12/1950"
+            }
+
+            let person2 = {
+                name: "Mickey",
+                surname: "Mouse",
+                gender: "M",
+                dob: "16/1/1928"
+            }
+
+            let person3 = {
+                name: "Matt",
+                surname: "Edabit",
+                gender: "M",
+                dob: "1/1/1900"
+            }
+
+            fiscalCode(person)
+            fiscalCode(person2)
+            fiscalCode(person3)
+        });
+</script>
+</html>

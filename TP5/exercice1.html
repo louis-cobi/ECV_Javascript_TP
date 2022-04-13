@@ -10,9 +10,12 @@
     
 </body>
 <script>
-    
+
     function getHashTags(str) {
-        return str.toLowerCase().split(" ").map(i => '#' + i).sort((function(a, b){ return b.length - a.length})).slice(0, 3);
+        return str.toLowerCase().split(" ")
+        .map(i => '#' + i)
+        .sort((function(a, b){ return b.length - a.length}))
+        .slice(0, 3);
     }
 
     console.log(getHashTags("How The Avocado Has Became The Fruit of the Global Trade ?"));

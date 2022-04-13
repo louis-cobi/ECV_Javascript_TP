@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice 2</title>
+</head>
+<body>
+    
+</body>
+<script>
+        function biggerThan(a,b) {
+            return new Promise((success, failure) => {
+                if (a > b) {
+                    success(a - b);
+                } else {
+                    failure("la 2nd valeur est plus grande que la 1er");
+                }
+            })
+        }
+
+        function success(résultat) {
+            console.log(résultat);
+        }
+
+
+        function failure(erreur) {
+            console.error(erreur);
+        }
+
+
+        biggerThan(2,7).then(success, failure);    
+        biggerThan(5,2).then(success, failure);    
+</script>
+</html>

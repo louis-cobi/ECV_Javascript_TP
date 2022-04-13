@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice 1</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const str1 = "Cette phrase doit avoir plus de 20 caractères";
+    const str2 = "moins de 20";
+    
+    function calculStr(String) {
+        return new Promise((success, failure) => {
+            if (String.length > 20) {
+                success("True");
+            } else {
+                failure("False");
+            }
+        })
+    }
+        
+    function success(result) {
+        console.log("+ de 20 caractères : " , result);
+    }
+        
+    function failure(error) {
+        console.error("+ de 20 caractères : " , error);
+    }
+
+        
+    calculStr(str1).then(success, failure);    
+    calculStr(str2).then(success, failure);       
+</script>
+</html>
